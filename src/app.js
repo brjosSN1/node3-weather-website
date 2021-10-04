@@ -14,8 +14,7 @@ const { WSAEDESTADDRREQ } = require('constants');
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
-const appTitle = 'Weather';
-const appName = 'Managed by Jordyn IT Framework, LLC ';
+const appTitle = 'Tremmor Weather Request'
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -29,28 +28,28 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
     res.render('index', {
         title: appTitle,
-          name: appName
+        name: 'Brian Joseph'
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
        title: appTitle,
-        name: appName
+        name: 'Brian Joseph'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: appTitle,
-        name: appName
+        name: 'Brian Joseph'
     });
 });
 
 app.get('/weather', (req, res) => {
     res.render('weather', {
         title: appTitle,
-        name: appName
+        name: 'Yearly match tile systems'
     });
 });
 
